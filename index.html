@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frevr unrlsd</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">frevr unrlsd</div>
+        <div class="menu-item" data-page="home">
+            <img src="https://api.iconify.design/lucide:home.svg?color=white" alt="Home">
+            <span>Home</span>
+        </div>
+        <div class="menu-item" data-page="search">
+            <img src="https://api.iconify.design/lucide:search.svg?color=white" alt="Search">
+            <span>Search</span>
+        </div>
+        <div class="menu-item" data-page="library">
+            <img src="https://api.iconify.design/lucide:library.svg?color=white" alt="Your Library">
+            <span>Your Library</span>
+        </div>
+        <div class="menu-item" data-page="liked">
+            <img src="https://api.iconify.design/lucide:heart.svg?color=white" alt="Liked Songs">
+            <span>Liked Songs</span>
+        </div>
+        <div class="menu-item" data-page="playlists">
+            <img src="https://api.iconify.design/lucide:list.svg?color=white" alt="Playlists">
+            <span>Playlists</span>
+        </div>
+        <div class="settings">
+            <button class="settings-btn" id="settingsBtn">
+                <img src="https://api.iconify.design/lucide:settings.svg?color=white" alt="Settings">
+                <span>Settings</span>
+            </button>
+            <div class="settings-panel" id="settingsPanel">
+                <h3>Timestamp Settings</h3>
+                <input type="text" id="timestamp1" placeholder="Button 1 (e.g., 0:11)">
+                <input type="text" id="timestamp2" placeholder="Button 2 (e.g., 0:37)">
+                <input type="text" id="timestamp3" placeholder="Button 3">
+                <input type="text" id="timestamp4" placeholder="Button 4">
+                <input type="text" id="timestamp5" placeholder="Button 5">
+                <button id="saveTimestampsBtn">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="top-bar">
+            <div class="user-profile"></div>
+        </div>
+        <div id="pageContent"></div>
+        <div class="player">
+            <div class="record" id="record">
+                <img src="https://picsum.photos/300" alt="Album cover" id="albumCover">
+                <div class="record-overlay"></div>
+            </div>
+            <div class="song-info">
+                <h2 id="songTitle">Song Title</h2>
+                <p id="artistName">Artist Name</p>
+            </div>
+            <div class="controls">
+                <button class="control-btn" id="shuffleBtn">
+                    <img src="https://api.iconify.design/lucide:shuffle.svg?color=white" alt="Shuffle">
+                </button>
+                <button class="control-btn" id="prevBtn">
+                    <img src="https://api.iconify.design/lucide:skip-back.svg?color=white" alt="Previous">
+                </button>
+                <button class="control-btn" id="playBtn">
+                    <img src="https://api.iconify.design/lucide:play.svg?color=white" alt="Play" id="playBtnIcon">
+                </button>
+                <button class="control-btn" id="nextBtn">
+                    <img src="https://api.iconify.design/lucide:skip-forward.svg?color=white" alt="Next">
+                </button>
+                <button class="control-btn" id="repeatBtn">
+                    <img src="https://api.iconify.design/lucide:repeat.svg?color=white" alt="Repeat">
+                </button>
+            </div>
+            <div class="timestamp-buttons">
+                <button class="timestamp-btn" data-index="0">1</button>
+                <button class="timestamp-btn" data-index="1">2</button>
+                <button class="timestamp-btn" data-index="2">3</button>
+                <button class="timestamp-btn" data-index="3">4</button>
+                <button class="timestamp-btn" data-index="5">5</button>
+            </div>
+            <button class="control-btn" id="discoverBtn">
+                <img src="https://api.iconify.design/lucide:compass.svg?color=white" alt="Discover">
+            </button>
+            <div class="playlist-dropdown">
+                <button class="control-btn" id="addToPlaylistBtn">
+                    <img src="https://api.iconify.design/lucide:plus.svg?color=white" alt="Add to Playlist">
+                </button>
+                <div class="playlist-dropdown-content" id="playlistDropdown"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="discovery" id="discovery">
+        <div class="discovery-content" id="discoveryContent">
+            <div class="discovery-info">
+                <h3 id="discoverySongTitle">Discovery Song Title</h3>
+                <p id="discoveryArtistName">Discovery Artist Name</p>
+            </div>
+            <div class="discovery-controls">
+                <button id="likeBtn">
+                    <img src="https://api.iconify.design/lucide:heart.svg?color=white" alt="Like">
+                </button>
+                <button id="closeDiscoveryBtn">
+                    <img src="https://api.iconify.design/lucide:x.svg?color=white" alt="Close">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle"></h2>
+            <div id="modalBody"></div>
+            <div class="modal-buttons">
+                <button id="modalConfirm">Confirm</button>
+                <button id="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="pages.js"></script>
+</body>
+</html>

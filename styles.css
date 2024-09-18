@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.menu-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.user-profile {
+    width: 32px;
+    height: 32px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.player {
+    padding: 20px;
+    background-color: #181818;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.record {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #333;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.record-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, transparent 20%, #000000 20%, #000000 40%, transparent 40%, transparent 60%, #000000 60%, #000000 80%, transparent 80%);
+    pointer-events: none;
+}
+
+.record img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.control-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.discovery {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 500px;
+    background-color: #000;
+    border: 8px solid #333;
+    border-radius: 30px;
+    overflow: hidden;
+    display: none;
+    resize: both;
+}
+
+.discovery-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.discovery-info {
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px;
+}
+
+.discovery-controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.discovery-controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.discovery-controls img {
+    width: 24px;
+    height: 24px;
+}
+
+.timestamp-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.timestamp-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.settings {
+    margin-top: auto;
+}
+
+.settings-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.settings-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.settings-panel {
+    display: none;
+    background-color: #282828;
+    padding: 20px;
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    width: 200px;
+}
+
+.settings-panel input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#pageContent {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.playlist-item:hover {
+    background-color: #282828;
+}
+
+.playlist-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.stylized-input {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.stylized-button {
+    background-color: #1db954;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #282828;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#modalConfirm {
+    background-color: #1db954;
+    color: white;
+}
+
+#modalCancel {
+    background-color: #333;
+    color: white;
+}
+
+.playlist-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.playlist-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #282828;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.playlist-dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.playlist-dropdown-content a:hover {
+    background-color: #333;
+}
+
+.playlist-dropdown:hover .playlist-dropdown-content {
+    display: block;
+}
