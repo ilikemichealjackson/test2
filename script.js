@@ -1,9 +1,14 @@
 const songs = [
-    { id: 1, title: "Neon Dreams", artist: "Synthwave Collective", cover: "https://picsum.photos/300?random=1", audio: "https://example.com/audio/neon_dreams.mp3" },
-    { id: 2, title: "Midnight Cruise", artist: "Retro Riders", cover: "https://picsum.photos/300?random=2", audio: "https://example.com/audio/midnight_cruise.mp3" },
-    { id: 3, title: "Digital Sunset", artist: "Pixel Pulse", cover: "https://picsum.photos/300?random=3", audio: "https://example.com/audio/digital_sunset.mp3" },
-    { id: 4, title: "Cyber Funk", artist: "Neon Nights", cover: "https://picsum.photos/300?random=4", audio: "https://example.com/audio/cyber_funk.mp3" },
-    { id: 5, title: "Retrograde Motion", artist: "Time Travelers", cover: "https://picsum.photos/300?random=5", audio: "https://example.com/audio/retrograde_motion.mp3" }
+    { id: 1, title: "Forever v2", artist: "Kanye", cover: "51rhnW+7YXL._AC_.jpg", audio: "Forever_V2.mp3" },
+    { id: 2, title: "On god act III", artist: "Kanye", cover: "51rhnW+7YXL._AC_.jpg", audio: "4batz_act_iii_on_god_she_like_Remix_V1.mp3" },
+    { id: 3, title: "B****es_Do_Voodoo", artist: "Kanye", cover: "51rhnW+7YXL._AC_.jpg", audio: "Bitches_Do_Voodoo.mp3" },
+    { id: 4, title: "Law of atraction v8", artist: "Kanye", cover: "51rhnW+7YXL._AC_.jpg", audio: "Law_Of_Attraction_V8.mp3" },
+    { id: 5, title: "Preacher Man run it / running", artist: "Kanye", cover: "51rhnW+7YXL._AC_.jpg", audio: "Preacher_Man.mp3" }
+    { id: 6, title: "Gimme a sec", artist: "Kanye", cover: "51rhnW+7YXL._AC_.jpg", audio: "Rich_The_Kid_Gimme_A_Second_2.mp3" },
+    { id: 7, title: "Slide v7", artist: "Kanye", cover: "51rhnW+7YXL._AC_.jpg", audio: "Slide_V7.mp3" },
+    { id: 8, title: "alien v18", artist: "Kanye", cover: "51rhnW+7YXL._AC_.jpg", audio: "Space_X_Alien_V18.mp3" },
+    { id: 9, title: "The storm v15", artist: "Kanye", cover: "51rhnW+7YXL._AC_.jpg", audio: "XXX_The_Storm_V15.mp3" },
+    { id: 10, title: "The storm v16", artist: "Kanye", cover: "51rhnW+7YXL._AC_.jpg", audio: "XXX_V16.mp3" }
 ];
 
 let currentSongIndex = 0;
